@@ -1,0 +1,24 @@
+{
+  "name": "scribble-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prathammathur01/skribble-clone-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/prathammathur01/skribble-clone-/issues"
+  },
+  "homepage": "https://github.com/prathammathur01/skribble-clone-#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
