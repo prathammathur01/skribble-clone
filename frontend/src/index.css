@@ -1,0 +1,106 @@
+/* ============================================================
+   index.css — Global styles
+   Neon Arcade Theme | Righteous + Quicksand fonts
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-bg: #0d0d1a;
+  --color-surface: #12122a;
+  --color-card: #1a1a3d;
+  --color-accent: #ff3cac;
+  --color-accent2: #ffcc00;
+  --color-accent3: #00f5ff;
+  --color-text: #f0f0ff;
+  --color-text-muted: #8888bb;
+  --color-border: #2a2a5a;
+  --color-correct: #00e676;
+  --color-drawer: #00b4ff;
+  --border-radius: 14px;
+  --glow-pink: 0 0 18px rgba(255, 60, 172, 0.45);
+  --glow-cyan: 0 0 18px rgba(0, 245, 255, 0.35);
+  --glow-yellow: 0 0 14px rgba(255, 204, 0, 0.4);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(120, 75, 160, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 245, 255, 0.05) 0%, transparent 50%);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, .logo {
+  font-family: 'Righteous', cursive;
+}
+
+button {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: transform 0.15s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+button:hover { opacity: 0.92; transform: translateY(-2px); }
+button:active { transform: translateY(0px); }
+button:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+input[type="text"],
+input[type="number"],
+select {
+  font-family: 'Quicksand', sans-serif;
+  background: rgba(255,255,255,0.04);
+  border: 2px solid var(--color-border);
+  border-radius: 10px;
+  color: var(--color-text);
+  padding: 10px 14px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-weight: 600;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: var(--color-accent);
+  box-shadow: var(--glow-pink);
+}
+
+select option {
+  background: var(--color-card);
+  color: var(--color-text);
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 290px;
+  grid-template-rows: auto 1fr;
+  gap: 12px;
+  padding: 12px;
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }

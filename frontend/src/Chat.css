@@ -1,0 +1,96 @@
+/* ============================================================
+   Chat.css — Chat / Guessing panel styles
+   ============================================================ */
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: calc(100vh - 100px);
+}
+
+.chat-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+  flex-shrink: 0;
+  font-family: 'Righteous', cursive;
+}
+
+.messages-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+.messages-list::-webkit-scrollbar { width: 4px; }
+.messages-list::-webkit-scrollbar-track { background: transparent; }
+.messages-list::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
+
+.no-messages {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.message {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.87rem;
+  line-height: 1.45;
+  word-break: break-word;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.message-chat { background: var(--color-card); }
+
+.message-correct {
+  background: rgba(0, 230, 118, 0.1);
+  border-color: rgba(0, 230, 118, 0.4);
+  color: var(--color-correct);
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0, 230, 118, 0.15);
+}
+
+.message-system {
+  background: rgba(255, 204, 0, 0.08);
+  border-color: rgba(255, 204, 0, 0.3);
+  color: var(--color-accent2);
+  font-style: italic;
+}
+
+.message-sender {
+  font-weight: 800;
+  color: var(--color-accent3);
+}
+
+.guess-input-area {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.guess-input-area input { flex: 1; min-width: 0; }
+
+.send-btn {
+  background: linear-gradient(135deg, var(--color-accent), #c0007a);
+  color: white;
+  width: 42px;
+  padding: 0;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: var(--glow-pink);
+}
