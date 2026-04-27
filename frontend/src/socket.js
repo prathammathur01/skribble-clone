@@ -11,6 +11,6 @@ import { io } from "socket.io-client";
 
 // Connect to our backend server
 // During development, the backend runs on port 3001
-const socket = io("https://sincere-peace-production-3424.up.railway.app");
+const socket = io("https://sincere-peace-production-7c03.up.railway.app");
 
 export default socket;
